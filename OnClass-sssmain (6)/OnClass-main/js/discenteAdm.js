@@ -2,6 +2,7 @@ const btnAddAluno = document.getElementById('btn-add-aluno');
 const modalAluno = document.getElementById('modal-aluno');
 const closeModal = document.getElementById('close-modal-aluno');
 const formAluno = document.getElementById('form-aluno');
+const salvarAluno = document.getElementById('salvar-aluno');
 
 // Abrir modal//
 btnAddAluno.addEventListener('click', () => {
