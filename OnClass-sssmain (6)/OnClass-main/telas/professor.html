@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home - Administrador</title>
+  <link rel="stylesheet" href="../css/professor.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Barra Lateral -->
+    <aside class="sidebar">
+      <div class="logo">
+        <h2>ONCLASS</h2>
+      </div>
+    
+
+      <ul class="menu">
+        <li>
+          <img src="../img/Administrator Male.png" alt="Docente">
+          <a href="../telas/professor.html">Docente</a>
+        </li>
+        <li>
+          <img src="../img/Document.png" alt="Discente">
+          <a href="../telas/discenteAdm.html">Relatorio de presença</a>
+        </li>
+      </ul>
+      <div class="logout">
+        <img src="../img/Logout Rounded Left.png" alt="Logout">
+        <a href="../telas/home.html" id="logoutBtn">Logout</a>
+      </div>
+    </aside>
+
+    <!-- Área Principal -->
+    <main class="main-content">
+      <!-- Barra Superior -->
+      <header class="header">
+        <h1>Docente</h1>
+      </header>
+    <div class="filters">
+        <select id="select-docente">
+            <option value="">DOCENTE</option>
+        </select>
+        <select id="select-curso">
+            <option value="">CURSO</option>
+        </select>
+        <select id="select-turno">
+            <option value="">TURNO</option>
+        </select>
+        <select id="select-semestre">
+            <option value="">SEMESTRE</option>
+        </select>
+    </div>
+
+    <div class="actions">
+        <button id="btn-add-qrcode" class="btn-primary">Gerar QRCode</button>
+    </div>
+
+    <!-- Modal de gerar QRCode -->
+<div id="modal-qrcode" class="modal">
+  <div class="modal-content">
+    <span class="close-modal" id="close-modal">&times;</span>
+
+    <h2>QR Code da Aula</h2>
+    <div id="infoAula"></div>
+    <div id="qrcode"></div>
+    <div id="qrcodeDiv" style="display: flex; justify-content: center; margin: 20px 0;"></div>
+    <button id="baixarBtn" class="btn-primary">Baixar QR Code</button>
+  </div>
+</div>
+
+    <div class="quadro-horarios">
+  <h2>Quadro de Horários</h2>
+  <table id="tabelaHorarios">
+    <thead>
+      <tr>
+        <th>Dia</th>
+        <th>Horário</th>
+        <th>Curso</th>
+        <th>Turma</th>
+        <th>Professor</th>
+      </tr>
+    </thead>
+    <tbody>
+    </tbody>
+  </table>
+
+  <button id="adicionarHorario">Adicionar Horário</button>
+</div>
+
+  <script src="../js/professor.js"></script>
+</body>
+</html>
