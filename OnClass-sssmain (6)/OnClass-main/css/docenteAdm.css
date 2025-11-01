@@ -233,30 +233,66 @@ body {
 }
 
 .alunos-recentes {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 680px;
-  padding: 20px;
-  box-shadow: 0 -2px 6px rgba(0,0,0,0.1);
-  margin-left: 245px;
+  position: relative;
+  max-width: 700px;
+  width: 100%;
+  margin-left: 240px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 25px 30px;
+  overflow: hidden;
+  z-index: 1;
+  margin-top: -515px;
 }
 
 .alunos-recentes h2 {
-  margin-bottom: 15px;
-  font-size: 18px;
+  font-size: 20px;
   color: #00257c;
+  margin-bottom: 15px;
+  text-align: center;
+  border-bottom: 2px solid #00257c;
+  padding-bottom: 10px;
 }
 
 .alunos-recentes ul {
   list-style: none;
   margin: 0;
   padding: 0;
+  max-height: 320px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #00257c #f0f0f0;
+  overflow-x: hidden;
 }
 
-.alunos-recentes ul li {
-  padding: 10px 0;
-  border-bottom: 1px solid #ddd;
-  font-size: 14px;
+/* Scroll personalizado */
+.alunos-recentes ul::-webkit-scrollbar {
+  width: 8px;
+}
+.alunos-recentes ul::-webkit-scrollbar-thumb {
+  background-color: #00257c;
+  border-radius: 4px;
+}
+.alunos-recentes ul::-webkit-scrollbar-track {
+  background-color: #f0f0f0;
+}
+
+/* Estilo dos itens */
+.alunos-recentes li {
+  background-color: #f9f9f9;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  padding: 12px 15px;
+  font-size: 15px;
   color: #333;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Efeito hover */
+.alunos-recentes li:hover {
+  transform: scale(1.02);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
 }

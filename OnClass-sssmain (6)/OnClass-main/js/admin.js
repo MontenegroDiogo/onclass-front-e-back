@@ -1,14 +1,6 @@
+const btnFiltrar = document.getElementById('btn-filtrar');
 
-// botões//
-  const btnFiltrar = document.getElementById('btn-filtrar');
-  const btnAddCurso = document.getElementById('btn-add-curso');
-// modals//
-  const modalCurso = document.getElementById('modal-curso');
-  const closeModal = document.getElementById('close-modal-curso');
-// formularios//
-  const formCurso = document.getElementById('form-curso');
-
-  // Evento do botão Filtrar
+// Evento do botão Filtrar
   btnFiltrar.addEventListener('click', () => {
     const filtros = {
       docente: document.getElementById('select-docente').value,
@@ -18,26 +10,6 @@
     };
     carregarHorarios(filtros);
   });
-
-  // Abrir modal
-  btnAddCurso.addEventListener('click', () => {
-    modalCurso.style.display = 'flex';
-  });
-
-
-  // Fechar modal
-  closeModal.addEventListener('click', () => {
-    modalCurso.style.display = 'none';
-  });
-
-
-  // Fechar modal clicando fora
-  window.addEventListener('click', (e) => {
-    if (e.target === modalCurso) {
-      modalCurso.style.display = 'none';
-    }
-  });
-
 
 const tabela = document.querySelector("#tabelaHorarios tbody");
 const abrirModal = document.querySelector("#abrirModal");
