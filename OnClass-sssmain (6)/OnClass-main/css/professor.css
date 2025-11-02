@@ -125,6 +125,7 @@ body {
   font-size: 14px;
   margin-top: 10px;
   margin-left: 20px;
+  margin-right: 20px;
 }
 
 /* Modal */
@@ -191,6 +192,8 @@ body {
   padding: 20px;
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
   margin-top: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 .quadro-horarios h2 {
