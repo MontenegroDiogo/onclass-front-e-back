@@ -113,6 +113,32 @@
   </div>
 </div>
 
+<!-- Modal de Adição de Curso -->
+<div id="modalAdicionarCurso" class="modal">
+  <div class="modal-conteudo">
+    <span class="fechar">&times;</span>
+    <h3>Adicionar Curso</h3>
+    <form id="formAdicionarCurso">
+      <label>Nome:</label>
+      <input type="text" id="novoNome" required />
+
+      <label>Código:</label>
+      <input type="text" id="novoCodigo" required />
+
+      <label>Turno:</label>
+      <input type="text" id="novoTurno" required />
+
+      <label>Semestre:</label>
+      <input type="number" id="novoSemestre" min="1" max="10" required />
+
+      <label>Docente:</label>
+      <input type="text" id="novoDocente" required />
+
+      <button type="submit" class="btn-azul">Salvar Curso</button>
+    </form>
+  </div>
+</div>
+
 <script src="../js/cursosAdm.js"></script>
 </body>
 </html>

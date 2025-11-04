@@ -276,3 +276,49 @@ body {
   color: #555555;
   cursor: pointer;
 }
+
+/* ===== MODAL DE ADICIONAR CURSO ===== */
+#modalAdicionarCurso {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height:100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+}
+
+#modalAdicionarCurso .modal-conteudo {
+  background: #fff;
+  padding: 40px;
+  border-radius: 8px;
+  width: 400px;
+  max-width: 90%;
+  position: fixed;
+}
+
+#modalAdicionarCurso h3 {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+#modalAdicionarCurso label {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#modalAdicionarCurso input {
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#modalAdicionarCurso button {
+  margin-top: 20px;
+  margin-left: 85px;
+  margin-right: 50px;
+}

@@ -2,10 +2,13 @@ const tabelaCursosBody = document.getElementById("tabelaCursosBody");
 const modalEditarCurso = document.getElementById("modalEditarCurso");
 const btnFecharModal = document.querySelector(".fechar");
 const formEditarCurso = document.getElementById("formEditarCurso");
+const modalAdicionarCurso = document.getElementById("modalAdicionarCurso");
+const formAdicionarCurso = document.getElementById("formAdicionarCurso");
+const btnAdicionarCurso = document.getElementById("adicionarCurso"); 
 
 let cursos = [
   { nome: "Análise e Desenvolvimento de Sistemas", codigo: "ANgIE", turno: "Noite", semestre: 3, docente:"Igor Cardoso" },
-  { nome: "Engenharia de Software", codigo: "ENGSW", turno: "Tarde", semestre: 4, docente: "Renata ingrata" },
+  { nome: "Engenharia de Software", codigo: "ENgSW", turno: "Noite", semestre: 4, docente: "Renata ingrata" },
 ];
 
 let cursoEditando = null;
@@ -48,6 +51,30 @@ function removerCurso(index) {
   }
 }
 
+// Função para abrir o modal de adicionar curso
+btnAdicionarCurso.addEventListener("click", () => {
+  modalAdicionarCurso.style.display = "flex";
+});
+
+// Função para salvar novo curso
+formAdicionarCurso.addEventListener("submit", (e) => {
+  e.preventDefault();
+
+  const novoCurso = {
+    nome: document.getElementById("novoNome").value,
+    codigo: document.getElementById("novoCodigo").value,
+    turno: document.getElementById("novoTurno").value,
+    semestre: parseInt(document.getElementById("novoSemestre").value),
+    docente: document.getElementById("novoDocente").value,
+  };
+
+  cursos.push(novoCurso);
+  carregarTabela();
+  modalAdicionarCurso.style.display = "none";
+  formAdicionarCurso.reset();
+});
+
+
 formEditarCurso.addEventListener("submit", (e) => {
   e.preventDefault();
   cursos[cursoEditando] = {
@@ -63,11 +90,13 @@ formEditarCurso.addEventListener("submit", (e) => {
 
 btnFecharModal.addEventListener("click", () => {
   modalEditarCurso.style.display = "none";
+  modalAdicionarCurso.style.display= "none";
 });
 
 window.addEventListener("click", (event) => {
-  if (event.target === modalEditarCurso) {
+  if (event.target === modalEditarCurso || event.target === modalAdicionarCurso) {
     modalEditarCurso.style.display = "none";
+    modalAdicionarCurso.style.display = "none";
   }
 });
 
