@@ -5,12 +5,15 @@ const qrcodeDiv = document.getElementById("qrcode");
 const baixarBtn = document.getElementById("baixarBtn");
 
 const tabela = document.querySelector("#tabelaHorarios tbody");
-const botaoAdicionar = document.querySelector("#adicionarHorario");
+
 
 // Dados simulados
 const horarios = [
-  { dia: "Segunda-feira", horario: "08:00 - 10:00", curso: "ADS", disciplina: "Eng. Software", turma: "A", professor: "Igor Cardoso"}
-  
+  { dia: "Segunda-feira", horario: "08:00 - 10:00", curso: "ADS", disciplina: "Eng. Software", turma: "A", professor: "Igor Cardoso"},
+  { dia: "Terça-feira", horario: "08:00 - 10:00", curso: "ADS", disciplina: "Eng. Software", turma: "A", professor: "Igor Cardoso"},
+  { dia: "Quarta-feira", horario: "08:00 - 10:00", curso: "ADS", disciplina: "Eng. Software", turma: "A", professor: "Igor Cardoso"},
+  { dia: "Quinta-feira", horario: "08:00 - 10:00", curso: "ADS", disciplina: "Eng. Software", turma: "A", professor: "Igor Cardoso"},
+  { dia: "Sexta-feira", horario: "08:00 - 10:00", curso: "ADS", disciplina: "Eng. Software", turma: "A", professor: "Igor Cardoso"}
 ];
 
 // Renderizar tabela
@@ -32,20 +35,7 @@ function renderTabela() {
   });
 }
 
-// Adicionar novo horário
-botaoAdicionar.addEventListener("click", () => {
-  const novo = {
-    dia: prompt("Dia da semana:"),
-    horario: prompt("Horário:"),
-    curso: prompt("Curso:"),
-    turma: prompt("Turma:"),
-    professor: prompt("Professor:"),
-  };
-  if (novo.dia && novo.horario) {
-    horarios.push(novo);
-    renderTabela();
-  }
-});
+
 
 // Função para gerar o QR Code
 function gerarQRCode(aula) {
